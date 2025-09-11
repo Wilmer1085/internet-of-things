@@ -38,23 +38,53 @@ void loop() {
     opt = Serial.read();
 
     if(opt == '1' ){
-      digitalWrite(LED_GREEN, HIGH);
-      
-      }else if(opt == '2' ){
-      digitalWrite(LED_GREEN, LOW);
-      
-      }else  if(opt == '3' ){
-      digitalWrite(LED2_YELLOW, HIGH);
-      
-      }else if(opt == '4' ){
-      digitalWrite(LED2_YELLOW, LOW);
-      
-      }else  if(opt == '5' ){
       digitalWrite(LED3_RED, HIGH);
       
-      }else if(opt == '6' ){
+      }
+      
+      if(opt == '2' ){
       digitalWrite(LED3_RED, LOW);
       
+      }
+      if(opt == '3' ){
+      digitalWrite(LED2_YELLOW, HIGH);
+      
+      }
+      if(opt == '4' ){
+      digitalWrite(LED2_YELLOW, LOW);
+      
+      }
+      if(opt == '5' ){
+      digitalWrite(LED_GREEN, HIGH);
+      
+      }
+      if(opt == '6' ){
+      digitalWrite(LED_GREEN, LOW);
+      
+      }
+      if(opt == '7' ){
+      digitalWrite(LED_GREEN, HIGH);
+      digitalWrite(LED2_YELLOW, HIGH);
+      digitalWrite(LED3_RED, HIGH);
+      
+      }
+      if(opt == '8' ){
+      digitalWrite(LED_GREEN, LOW);
+      digitalWrite(LED2_YELLOW, LOW);
+      digitalWrite(LED3_RED, LOW);
+      }
+
+      if(opt == '9' ){
+       for (int i = 0; i < 5; i++) {
+      digitalWrite(LED_GREEN, HIGH);
+      digitalWrite(LED2_YELLOW, HIGH);
+      digitalWrite(LED3_RED, HIGH);
+    delay(500);
+    digitalWrite(LED_GREEN, LOW);
+      digitalWrite(LED2_YELLOW, LOW);
+      digitalWrite(LED3_RED, LOW);
+    delay(500);
+}
       }
     
     }
